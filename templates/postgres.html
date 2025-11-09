@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Postgres Data{% endblock title %}
+
+{% block content %}
+    <h1>Data z PostgreSQL</h1>
+    <p>Toto je přehled dat načtených z externí mikroslužby.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Název</th>
+                <th>Hodnota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in polozky %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nazev }}</td>
+                <td>{{ item.hodnota }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3">Žádná data nebyla nalezena.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

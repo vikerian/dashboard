@@ -1,0 +1,5 @@
+2025-11-05T11:26:20.304741Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-05T11:26:29.552975Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-05T15:14:59.388170Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-05T20:07:10.618118Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-05T20:08:33.205001Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

@@ -1,0 +1,54 @@
+2025-11-03T07:42:44.686404Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T07:42:50.140903Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T07:42:52.469118Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-03T07:42:55.676407Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-03T07:42:56.563543Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-03T07:43:35.266427Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T07:43:44.453140Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-03T07:43:46.799934Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T07:43:56.944703Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-03T07:56:06.203816Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:18:25.650585Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-03T15:18:25.804411Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-03T15:18:25.805623Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-03T15:18:25.805699Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-03T15:18:25.805923Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-03T15:18:25.844109Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-03T15:18:25.844224Z  INFO dashboard_project: AppState sestaven.
+2025-11-03T15:18:25.849256Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-03T15:19:52.865932Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:19:55.122053Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-03T15:19:57.107440Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:20:13.516009Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:20:19.630493Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-03T15:20:19.736828Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-03T15:20:19.738062Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-03T15:20:19.738185Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-03T15:20:19.738421Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-03T15:20:19.766284Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-03T15:20:19.766448Z  INFO dashboard_project: AppState sestaven.
+2025-11-03T15:20:19.770730Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-03T15:20:22.735114Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:20:24.380567Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-03T15:20:29.782560Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("vlhkost"))
+2025-11-03T15:20:29.783060Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"vlhkost"}}}
+2025-11-03T15:20:29.785805Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":33.099998}},{"_id":5,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":89.699997}}]}}
+2025-11-03T15:20:32.434088Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T15:20:35.910203Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-03T15:20:39.245765Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-03T15:20:41.208722Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-03T15:20:57.730265Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T15:21:03.532085Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T15:47:16.079365Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T15:47:23.474914Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-03T15:47:26.544133Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("vlhkost"))
+2025-11-03T15:47:26.544263Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"vlhkost"}}}
+2025-11-03T15:47:26.546796Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":33.099998}},{"_id":5,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":89.699997}}]}}
+2025-11-03T15:47:30.944305Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-03T15:47:35.927558Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-03T15:47:39.652784Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-03T15:47:42.415606Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-03T15:47:51.131303Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T16:36:29.964224Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T16:38:44.670923Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-03T21:48:33.403317Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

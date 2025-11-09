@@ -1,0 +1,253 @@
+2025-11-02T12:22:36.440345Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:22:36.565341Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:23:24.980095Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:23:25.116254Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:23:25.118120Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:23:25.118257Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:23:25.118927Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:23:25.152703Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:23:25.152817Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:23:25.157066Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:23:40.847224Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:23:44.099223Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:23:44.099420Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:24:55.083266Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:24:55.083452Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:25:02.656484Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:25:02.807507Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:25:02.808851Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:25:02.808931Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:25:02.809157Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:25:02.851149Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:25:02.851248Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:25:02.855793Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:25:05.020492Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:25:05.020679Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:25:08.051039Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:25:09.864213Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T12:25:10.561407Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T12:25:11.901373Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T12:25:13.285594Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T12:25:15.818232Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:25:17.826178Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:25:17.826365Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:25.070883Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:26:27.276008Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:27.276213Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:28.120958Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:28.121186Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:28.479492Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:28.479697Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:28.674551Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:28.674889Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:28.839179Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:28.839439Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:29.063657Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:29.063979Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:29.223508Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:29.223828Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:26:29.374790Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:26:29.375166Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:27:48.087866Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:27:48.251542Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:27:48.253048Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:27:48.253123Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:27:48.253459Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:27:48.295723Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:27:48.295823Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:27:48.300658Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:27:50.784042Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:27:50.784289Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:29:38.548997Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:29:38.710323Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:29:38.711663Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:29:38.711745Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:29:38.711994Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:29:38.752869Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:29:38.752990Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:29:38.757969Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:29:44.226162Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:29:46.177131Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T12:29:47.094964Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T12:29:49.442696Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T12:29:50.394087Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T12:29:52.119434Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:29:52.119626Z ERROR dashboard_project::routes::web: Chyba při renderování šablony 'search.html': Failed to render 'search.html'
+2025-11-02T12:31:10.255273Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:31:10.404949Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:31:10.406396Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:31:10.406541Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:31:10.410964Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:31:10.447286Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:31:10.447401Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:31:10.451289Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:31:16.266453Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T12:31:19.541349Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:36:20.438041Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T12:36:20.562438Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T12:36:20.563950Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T12:36:20.564188Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T12:36:20.564558Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T12:36:20.597549Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T12:36:20.597656Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T12:36:20.601727Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T12:36:23.313392Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:36:27.288012Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:36:28.249653Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T12:36:28.888107Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T12:36:29.557153Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T12:36:30.281169Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T12:36:31.116648Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T12:37:02.551955Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("teplota"))
+2025-11-02T12:37:02.552084Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"_source":true,"index":"dashboard_index","query":{"match":{"_all":"teplota"}}}
+2025-11-02T12:37:02.561074Z ERROR dashboard_project::routes::web: Chyba při dotazu do Manticore: error decoding response body
+2025-11-02T12:37:10.512777Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T12:37:10.513419Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"_source":true,"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T12:37:10.515693Z ERROR dashboard_project::routes::web: Chyba při dotazu do Manticore: error decoding response body
+2025-11-02T13:25:37.817848Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T13:25:37.941120Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T13:25:37.942596Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T13:25:37.942734Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T13:25:37.947063Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T13:25:37.974057Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T13:25:37.974158Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T13:25:37.978085Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T13:25:42.027819Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T13:25:44.104869Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T13:25:45.213596Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T13:25:46.104860Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T13:25:47.011686Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T13:25:51.821600Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T13:25:51.821725Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"_source":true,"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T13:25:51.824086Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 400 Bad Request): {"error":"\"_source\" property should be a string or an array or an object"}
+2025-11-02T13:25:51.824194Z ERROR dashboard_project::routes::web: Chyba při dotazu do Manticore: Manticore vrátil chybu (Status 400 Bad Request): {"error":"\"_source\" property should be a string or an array or an object"}
+2025-11-02T13:27:23.896254Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T13:27:24.021856Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T13:27:24.023032Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T13:27:24.023091Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T13:27:24.023338Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T13:27:24.057885Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T13:27:24.057977Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T13:27:24.062119Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T13:27:26.622358Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T13:27:26.622713Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T13:27:26.624677Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 500 Internal Server Error): {"error":"unknown local table(s) 'dashboard_index' in search request"}
+2025-11-02T13:27:26.624766Z ERROR dashboard_project::routes::web: Chyba při dotazu do Manticore: Manticore vrátil chybu (Status 500 Internal Server Error): {"error":"unknown local table(s) 'dashboard_index' in search request"}
+2025-11-02T13:44:56.199725Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T13:44:56.363798Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T13:44:56.365344Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T13:44:56.365424Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T13:44:56.365718Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T13:44:56.406918Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T13:44:56.407030Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T13:44:56.416179Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T13:44:59.497914Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T13:44:59.498052Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T13:44:59.501337Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1587,"_source":{"nazev":"Teplota CPU","hodnota":45.200001}},{"_id":4,"_score":1587,"_source":{"nazev":"Teplota","hodnota":39.700001}}]}}
+2025-11-02T13:46:59.559105Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T13:46:59.559204Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T13:46:59.561612Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1587,"_source":{"nazev":"Teplota CPU","hodnota":45.200001}},{"_id":4,"_score":1587,"_source":{"nazev":"Teplota","hodnota":39.700001}}]}}
+2025-11-02T13:47:11.711068Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T13:47:11.864929Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T13:47:11.866211Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T13:47:11.866283Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T13:47:11.866645Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T13:47:11.907141Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T13:47:11.907247Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T13:47:11.912649Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T13:47:13.558432Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T13:47:13.558538Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T13:47:13.561162Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1587,"_source":{"nazev":"Teplota CPU","hodnota":45.200001}},{"_id":4,"_score":1587,"_source":{"nazev":"Teplota","hodnota":39.700001}}]}}
+2025-11-02T14:06:15.025147Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T14:06:15.140271Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T14:06:15.141471Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T14:06:15.141536Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T14:06:15.141824Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T14:06:15.172422Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T14:06:15.172512Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T14:06:15.176456Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T14:06:19.106411Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:06:21.849464Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:06:23.371298Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T14:06:26.691587Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T14:06:28.150670Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T14:06:30.267189Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T14:06:33.927874Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("vlhkost"))
+2025-11-02T14:06:33.927996Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"vlhkost"}}}
+2025-11-02T14:06:33.932100Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":33.099998}},{"_id":5,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":89.699997}}]}}
+2025-11-02T14:07:03.873852Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T14:07:04.027282Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T14:07:04.028681Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T14:07:04.028828Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T14:07:04.029240Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T14:07:04.067874Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T14:07:04.067986Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T14:07:04.072992Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T14:07:08.052186Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("vlhkost"))
+2025-11-02T14:07:08.052303Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"vlhkost"}}}
+2025-11-02T14:07:08.055302Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":33.099998}},{"_id":5,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":89.699997}}]}}
+2025-11-02T14:12:31.580750Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T14:12:31.734157Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T14:12:31.735558Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T14:12:31.735703Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T14:12:31.735938Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T14:12:31.774228Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T14:12:31.774410Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T14:12:31.779571Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T14:13:15.472502Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:14:04.038754Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:14:10.675582Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:14:11.750710Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T14:14:12.913046Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:14:17.684501Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T14:14:19.818111Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T14:14:22.079503Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T14:14:33.691872Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:16:20.512636Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:17:52.428657Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:17:57.320686Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:17:59.789773Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T14:18:01.839319Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T14:18:03.010748Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T14:56:25.064841Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:56:49.845182Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:56:54.978463Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:56:56.447680Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T14:56:58.371778Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T14:57:06.251723Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T14:57:17.191235Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:57:18.225361Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T14:57:19.554544Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T14:57:21.174265Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T14:57:29.243660Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:57:38.696857Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T14:57:44.895623Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T14:57:52.695429Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T15:11:20.464678Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T15:11:24.396488Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T15:11:34.078626Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-02T15:11:34.078774Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-02T15:11:34.082666Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":2,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1587,"_source":{"nazev":"Teplota CPU","hodnota":45.200001}},{"_id":4,"_score":1587,"_source":{"nazev":"Teplota","hodnota":39.700001}}]}}
+2025-11-02T15:42:01.803339Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-02T15:42:01.930012Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-02T15:42:01.931546Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-02T15:42:01.931621Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-02T15:42:01.931863Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-02T15:42:01.964437Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-02T15:42:01.964530Z  INFO dashboard_project: AppState sestaven.
+2025-11-02T15:42:01.969090Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-02T15:42:07.513093Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T15:42:08.905971Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-02T15:42:09.793989Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-02T15:42:12.790147Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-02T15:42:15.833465Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-02T15:42:20.654052Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-02T15:42:25.586700Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("vlhkost"))
+2025-11-02T15:42:25.586855Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"vlhkost"}}}
+2025-11-02T15:42:25.589442Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":0,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":33.099998}},{"_id":5,"_score":1587,"_source":{"nazev":"Vlhkost","hodnota":89.699997}}]}}
+2025-11-02T17:46:06.331420Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T17:46:10.904428Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T18:28:52.016415Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T18:39:41.026711Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T18:49:36.717174Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-02T19:21:13.760898Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

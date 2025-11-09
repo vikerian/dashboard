@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}Hledání{% endblock title %}
+
+{% block content %}
+    <h1>Manticore Search</h1>
+    
+    <form action="/search" method="GET">
+        <label for="q">Hledat:</label>
+        <input type="text" id="q" name="q" value="{{ query }}">
+        <button type="submit">Hledat</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Výsledky</h2>
+    
+    {% if total_hits > -1 %}
+        <p>Nalezeno celkem: <strong>{{ total_hits }}</strong></p>
+
+        {% if total_hits > 0 %}
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+            {% for res in results %}
+                <pre style="background: #eee; padding: 1em; border-radius: 5px; overflow-x: auto;">
+{{ res | json_encode(pretty=true) }}
+                </pre>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>Dotazu "{{ query }}" neodpovídají žádné výsledky.</p>
+        {% endif %}
+
+    {% elif total_hits == -2 %}
+        <p style="color: red;">Při vyhledávání dotazu "{{ query }}" nastala chyba serveru.</p>
+        
+    {% else %}
+        <p>Zadejte dotaz pro prohledávání v indexech.</p>
+    {% endif %}
+
+{% endblock content %}

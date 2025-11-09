@@ -1,0 +1,212 @@
+2025-11-01T14:38:46.073875Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T14:38:46.073999Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T14:38:46.206773Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T14:38:46.208479Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T14:39:18.955836Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T14:39:21.166302Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T15:57:12.089664Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T15:57:12.089766Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T15:57:12.202510Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T15:57:49.541134Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T15:57:49.541202Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T15:57:49.697905Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T16:00:29.190985Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T16:00:29.191073Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T16:00:29.345592Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T16:03:57.332915Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T16:03:57.332992Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T16:03:57.465030Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T16:03:57.466749Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T16:03:57.468520Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T16:27:57.159265Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T16:27:59.452710Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (INFO)
+2025-11-01T16:28:05.258769Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T16:28:14.905695Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T16:32:37.047197Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-11-01T16:32:37.047263Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T16:32:37.160938Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T16:32:37.162133Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T16:32:37.163699Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T16:32:44.816182Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T16:32:47.793476Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T16:32:53.223199Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T16:32:55.588716Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T16:32:57.864017Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:08:15.650345Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:08:15.762390Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:08:15.764393Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:08:15.764459Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:08:15.764629Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:08:15.766799Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:08:20.358863Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:08:23.862236Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:08:25.640947Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:08:30.008787Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:08:31.597216Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T17:08:33.165666Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:08:35.203048Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:09:35.189968Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:10:42.751869Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:10:42.911653Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:10:42.912927Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:10:42.913016Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:10:42.913129Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:10:42.915975Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:10:48.586732Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:10:50.892925Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:11:43.765250Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:11:45.798031Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:11:52.917980Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:12:39.071334Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:13:02.905201Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:13:52.918991Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:14:05.525993Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:14:52.916956Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:15:52.921983Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:16:05.525948Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:16:52.917999Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:17:08.488946Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:17:08.612256Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:17:08.613364Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:17:08.613431Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:17:08.613479Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:17:08.615721Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:17:13.336207Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:17:55.920034Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:18:12.241165Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:18:17.328759Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:19:55.918178Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:20:17.524953Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:20:38.465542Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:20:38.573082Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:20:38.574217Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:20:38.574276Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:20:38.574322Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:20:38.576405Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:20:41.443431Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:20:55.919035Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:21:46.526962Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:21:59.674282Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:21:59.803952Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:21:59.805258Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:21:59.805332Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:21:59.805443Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:21:59.807818Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:22:12.319258Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:23:17.581006Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:23:28.150712Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:24:33.177937Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:26:12.324087Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:26:12.452896Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:26:12.454539Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:26:12.454625Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:26:12.454744Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:26:12.457444Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:26:14.851764Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:27:19.879123Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:27:34.466217Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:27:39.496048Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:29:39.494078Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:31:39.494140Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:32:39.493127Z  WARN dashboard_project::services::mqtt_client: Timeout při sběru MQTT $SYS statistik.
+2025-11-01T17:34:02.985396Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:34:03.102103Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:34:03.103229Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:34:03.103283Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:34:03.103344Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:34:03.103681Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:34:03.105575Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:34:09.363931Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:34:58.734941Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:35:49.717938Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:37:01.831312Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:40:11.902268Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:40:12.053086Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:40:12.054604Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:40:12.054682Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:40:12.055000Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:40:12.057755Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:40:12.057781Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:40:20.463670Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:41:38.394259Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:41:38.535484Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:41:38.536719Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:41:38.536795Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:41:38.537089Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:41:38.537151Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:41:38.539841Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:41:40.259325Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:43:34.326484Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:43:34.450388Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:43:34.451707Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:43:34.451774Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:43:34.451990Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:43:34.453656Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:43:34.454706Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:43:40.356702Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:47:20.849187Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:47:21.000632Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:47:21.001878Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:47:21.001958Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:47:21.002042Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:47:21.002547Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:47:21.005288Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:47:28.027502Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:47:36.604148Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:47:42.137081Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:48:19.021955Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:48:21.216977Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:48:23.622805Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:48:26.382717Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:48:27.530783Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:48:28.426668Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T17:48:28.896986Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T17:48:30.360660Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:49:32.263806Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:53:00.195340Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:53:00.356803Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:53:00.358467Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:53:00.358556Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:53:00.358657Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:53:00.358872Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:53:00.362345Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:54:17.857193Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:54:28.158442Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:54:28.833740Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:55:05.443208Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-01T17:55:05.603781Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-01T17:55:05.605176Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-01T17:55:05.605272Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-01T17:55:05.605377Z  INFO dashboard_project: AppState sestaven.
+2025-11-01T17:55:05.605565Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-01T17:55:05.608543Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-01T17:55:17.627018Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T17:55:21.328235Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:55:23.392207Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T17:55:23.960513Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T17:55:24.916258Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T17:55:26.410417Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T17:55:31.505314Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:03:25.494435Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:03:33.456415Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T18:03:45.019343Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:03:49.743820Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T18:03:57.683511Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T18:04:40.947222Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:04:43.642948Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T18:04:45.774947Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T18:04:46.911031Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T18:04:48.031258Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T18:04:51.964764Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:42:10.716149Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:42:16.417520Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:42:17.898863Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T18:42:25.890550Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T18:42:36.029873Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-01T18:42:39.861401Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T18:42:43.507824Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-01T18:42:48.595937Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-01T18:42:52.445816Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T18:42:54.788438Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-01T20:00:00.328977Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-01T20:00:08.623795Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

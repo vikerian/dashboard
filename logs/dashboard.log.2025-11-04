@@ -1,0 +1,35 @@
+2025-11-04T09:50:50.947170Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-04T09:50:58.896235Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-04T11:30:01.458879Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-04T13:15:26.464357Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-04T13:15:29.053576Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:15:29.201391Z ERROR dashboard_project::routes::web: Chyba při dotazu do TimescaleDB: error returned from database: could not access file "$libdir/timescaledb-tsl-2.19.3": No such file or directory
+2025-11-04T13:17:44.372553Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:17:44.372903Z  INFO sqlx_core::pool::inner: ping on idle connection returned error error=error returned from database: terminating connection due to administrator command
+2025-11-04T13:17:44.505581Z ERROR dashboard_project::routes::web: Chyba při dotazu do TimescaleDB: error returned from database: could not access file "$libdir/timescaledb-tsl-2.19.3": No such file or directory
+2025-11-04T13:17:45.107513Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:17:45.315913Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:41.946703Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:41.947087Z  INFO sqlx_core::pool::inner: ping on idle connection returned error error=error returned from database: terminating connection due to administrator command
+2025-11-04T13:19:42.078882Z ERROR dashboard_project::routes::web: Chyba při dotazu do TimescaleDB: error returned from database: could not access file "$libdir/timescaledb-tsl-2.19.3": No such file or directory
+2025-11-04T13:19:43.234981Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:43.450299Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:44.706810Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:45.120040Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:45.429939Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:45.722222Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T13:19:47.256444Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-04T13:19:48.157175Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T15:25:44.925954Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T15:25:47.883329Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-04T15:25:50.129626Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-04T17:10:02.980911Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-04T17:10:03.138538Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-04T17:10:03.141020Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-04T17:10:03.141163Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-04T17:10:03.141602Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-04T17:10:03.181138Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-04T17:10:03.181253Z  INFO dashboard_project: AppState sestaven.
+2025-11-04T17:10:03.186609Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-04T18:11:39.767105Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-04T18:14:07.736482Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

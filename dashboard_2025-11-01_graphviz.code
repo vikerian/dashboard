@@ -1,0 +1,105 @@
+/*
+ * Schéma aktuální architektury naší dashboard aplikace.
+ * (Stav po Kroku 5 - Postgres + Timescale + Valkey K:V)
+ * lze generovat pomoci dreampuf.github.io/GraphvizOnline/
+ */
+digraph CurrentArchitecture {
+    bgcolor="transparent";
+    node [fontname="Arial", shape=record];
+    edge [fontname="Arial", fontsize=10];
+    
+    // --- Uživatel ---
+    User [label="Uživatel\n(Prohlížeč)", shape=box, style="filled", fillcolor="white"];
+
+    // --- Naše Rust Aplikace ---
+    subgraph cluster_RustApp {
+        label = "Naše Rust Aplikace (dashboard-web)";
+        style = "filled";
+        bgcolor = "lightgrey";
+        
+        Router [label="axum::Router\n(Front Controller)", shape=hexagon, style="filled", fillcolor="lightyellow"];
+        
+        subgraph cluster_DI {
+            label = "Shared State (Dependency Injection)";
+            style = "filled";
+            bgcolor = "white";
+            AppState [
+                label="{ AppState | { <pg> PgPool | <vk> ValkeyClient | <tr_eng> Tera } }", 
+                shape=record, 
+                fillcolor="lightblue"
+            ];
+        }
+
+        subgraph cluster_Controllers {
+            label = "Controllers (routes/web.rs)";
+            style = "filled";
+            bgcolor = "white";
+            handler_pg [label="page_postgres()"];
+            handler_ts [label="page_timescale()"];
+            handler_vk [label="page_valkey()"];
+        }
+
+        subgraph cluster_Services {
+            label = "Services (services/*.rs)\n(Facade Pattern)";
+            style = "filled";
+            bgcolor = "white";
+            service_pg [label="get_data_from_postgres()"];
+            service_ts [label="get_timeseries_from_postgres()"];
+            service_vk [label="get_valkey_kv()"];
+        }
+    }
+
+    // --- Externí Služby (Databáze) ---
+    subgraph cluster_External {
+        label = "Externí Služby (Cílové Kontejnery)";
+        style = "dashed";
+        bgcolor = "aliceblue";
+
+        // Postgres Server
+        DB_PG [
+            label="{ <hdr> PostgreSQL Server | { <tbl1> moje_data | <tbl2_hdr> TimescaleDB (Hypertable) | <tbl2> senzor_data } }", 
+            shape=record, 
+            style="filled", 
+            fillcolor="lightblue"
+        ];
+        
+        // Valkey Server
+        DB_VK [
+            label="{ <hdr> Valkey Server | <kv> dashboard:status: '...' }", 
+            shape=record, 
+            style="filled", 
+            fillcolor="pink"
+        ];
+    }
+    
+    // --- Toky (Edges) ---
+    
+    // 1. Uživatel volá Router
+    User -> Router [label="GET /postgres\nGET /timescale\nGET /valkey"];
+    
+    // 2. Router volá správný Controller
+    Router -> handler_pg [label="/postgres"];
+    Router -> handler_ts [label="/timescale"];
+    Router -> handler_vk [label="/valkey"];
+    
+    // 3. AppState (DI) je injektován do Controllerů
+    AppState -> {handler_pg, handler_ts, handler_vk} [label="State<AppState>", style=dashed, color=blue];
+    
+    // 4. Controllery volají Služby
+    handler_pg -> service_pg [label="volá"];
+    handler_ts -> service_ts [label="volá"];
+    handler_vk -> service_vk [label="volá"];
+    
+    // 5. Služby se dotazují Databází
+    // (Ukazujeme, že obě Postgres služby sdílí stejný pool)
+    service_pg -> DB_PG:tbl1 [label="sqlx (SELECT)"];
+    service_ts -> DB_PG:tbl2 [label="sqlx (SELECT)"];
+    
+    // (Valkey služba volá Valkey)
+    service_vk -> DB_VK:kv [label="redis-rs (GET)"];
+    
+    // 6. Controllery renderují HTML
+    // (Všichni sdílí stejný Tera engine, který je v AppState)
+    {handler_pg, handler_ts, handler_vk} -> AppState:tr_eng [label="render(šablonu)", style=dotted, color=green];
+}
+

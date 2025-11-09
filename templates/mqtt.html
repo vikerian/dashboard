@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}MQTT Přehled{% endblock title %}
+
+{% block body_attributes %}
+    data-refresh-interval="{{ refresh_interval_ms }}"
+{% endblock body_attributes %}
+
+{% block content %}
+    <h1>Mosquitto MQTT Přehled</h1>
+    <p>
+        Stav brokeru: <code>{{ broker_host }}</code>
+    </p>
+    <p>
+        (Data se automaticky obnovují každých {{ refresh_interval_ms / 1000 }}s)
+    </p>
+
+    <h2>Statistiky Brokeru</h2>
+    <table style="width: 400px;">
+        <tbody>
+            <tr>
+                <td style="font-weight: bold;">Doba běhu (Uptime)</td>
+                <td id="mqtt-uptime">Načítám...</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Připojených klientů</td>
+                <td id="mqtt-clients">Načítám...</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Odeslaných zpráv</td>
+                <td id="mqtt-sent">Načítám...</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Přijatých zpráv</td>
+                <td id="mqtt-received">Načítám...</td>
+            </tr>
+            </tbody>
+    </table>
+
+ <script>
+        // Spustíme kód, až když je celé HTML načtené a připravené
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Teď už jsou 'data-' atributy 100% k dispozici
+            const intervalMs = document.body.dataset.refreshInterval;
+            const REFRESH_INTERVAL_MS = parseInt(intervalMs, 10) || 30000; // Pojistka 30s
+
+            // Funkce, která volá API (zůstává stejná)
+            async function fetchMqttStats() {
+                try {
+                    const response = await fetch('/api/v1/mqtt/stats');
+                    if (!response.ok) {
+                        throw new Error(`Chyba serveru: ${response.status}`);
+                    }
+                    
+                    const stats = await response.json();
+
+                    document.getElementById('mqtt-uptime').innerText = stats.uptime;
+                    document.getElementById('mqtt-clients').innerText = stats.clients_connected;
+                    document.getElementById('mqtt-sent').innerText = stats.messages_sent;
+                    document.getElementById('mqtt-received').innerText = stats.messages_received;
+
+                } catch (error) {
+                    console.error('Nepodařilo se načíst MQTT statistiky:', error);
+                    document.getElementById('mqtt-uptime').innerText = 'Chyba';
+                    document.getElementById('mqtt-clients').innerText = 'Chyba';
+                    document.getElementById('mqtt-sent').innerText = 'Chyba';
+                    document.getElementById('mqtt-received').innerText = 'Chyba';
+                }
+            }
+
+            // 1. Zavoláme funkci ihned (jsme v 'DOMContentLoaded')
+            fetchMqttStats();
+
+            // 2. Nastavíme automatické opakování (polling)
+            setInterval(fetchMqttStats, REFRESH_INTERVAL_MS);
+            
+        }); // <-- Konec 'DOMContentLoaded'
+    </script>
+
+{% endblock content %}

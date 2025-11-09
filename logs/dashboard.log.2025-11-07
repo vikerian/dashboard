@@ -1,0 +1,13 @@
+2025-11-07T06:02:27.097243Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-07T06:04:11.945424Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-07T10:50:23.136008Z  WARN dashboard_project::services::mqtt_client: MQTT Sběrač: Smyčka přerušena. Připojení ztraceno.
+2025-11-07T16:31:30.263887Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-11-07T16:31:30.384237Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-11-07T16:31:30.385742Z  INFO dashboard_project::state: Úspěšně připojeno k Valkey/Redis.
+2025-11-07T16:31:30.385839Z  INFO dashboard_project::state: MQTT konfigurace načtena.
+2025-11-07T16:31:30.386295Z  INFO dashboard_project::services::mqtt_client: MQTT Sběrač: Úspěšně připojen a přihlášen k odběru $SYS.
+2025-11-07T16:31:30.417548Z  INFO dashboard_project::state: Manticore HTTP klient vytvořen.
+2025-11-07T16:31:30.417667Z  INFO dashboard_project: AppState sestaven.
+2025-11-07T16:31:30.421884Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-11-07T16:31:30.422031Z ERROR dashboard_project: Nepodařilo se bindovat na port 8080: Address already in use (os error 98)
+2025-11-07T22:03:01.554065Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)

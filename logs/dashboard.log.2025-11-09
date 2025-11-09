@@ -1,0 +1,25 @@
+2025-11-09T15:20:40.898217Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T15:29:18.449153Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T15:29:22.208516Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-09T15:29:24.268728Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-09T15:29:26.702215Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-09T15:29:29.102180Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-09T15:29:33.672494Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-09T15:29:36.411575Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: Some("Teplota"))
+2025-11-09T15:29:36.411721Z DEBUG dashboard_project::services::search_manticore: Odesílám Manticore dotaz: {"index":"dashboard_index","query":{"match":{"_all":"Teplota"}}}
+2025-11-09T15:29:36.433771Z DEBUG dashboard_project::services::search_manticore: Obdržená RAW odpověď z Manticore (Status: 200 OK): {"took":7,"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1587,"_source":{"nazev":"Teplota CPU","hodnota":45.200001}},{"_id":4,"_score":1587,"_source":{"nazev":"Teplota","hodnota":39.700001}}]}}
+2025-11-09T18:43:50.294612Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T19:26:49.320407Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T19:50:41.531339Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T19:58:38.286049Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T20:24:37.703471Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-09T20:24:44.447076Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-09T20:24:46.176467Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-09T20:24:47.615516Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T21:20:08.411859Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)
+2025-11-09T21:20:13.599448Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /search (query: None)
+2025-11-09T21:20:16.713786Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-11-09T21:20:19.602914Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /timescale
+2025-11-09T21:20:23.031815Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /valkey (K:V)
+2025-11-09T21:20:28.464722Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-11-09T21:20:38.281967Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /mqtt (HTML kostra)

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}TimescaleDB Senzory{% endblock title %}
+
+{% block content %}
+    <h1>Data ze Senzorů (TimescaleDB)</h1>
+    <p>Posledních 100 záznamů.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Čas</th>
+                <th>ID Senzoru</th>
+                <th>Hodnota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in senzory %}
+            <tr>
+                <td>{{ data.time | date(format="%Y-%m-%d %H:%M:%S") }}</td>
+                <td>{{ data.senzor_id }}</td>
+                <td>{{ data.hodnota }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3">Žádná data nebyla nalezena.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

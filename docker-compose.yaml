@@ -1,0 +1,14 @@
+services:
+  valkey-db:
+    container_name: valkeydb
+    image: valkey/valkey-extension:latest
+    ports:
+      - "6379:6379"
+    networks:
+      appnet:
+    volumes:
+      - "/srv/valkey:/data:rw"
+    restart: unless-stopped
+
+networks:
+  appnet:

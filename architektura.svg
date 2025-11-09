@@ -1,0 +1,414 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1441pt" height="734pt" viewBox="0.00 0.00 1441.00 734.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 729.72)">
+<title>FinalArchitecture</title>
+<g id="clust1" class="cluster">
+<title>cluster_User</title>
+<polygon fill="aliceblue" stroke="black" points="8,-492.1 8,-717.72 142,-717.72 142,-492.1 8,-492.1"/>
+<text xml:space="preserve" text-anchor="middle" x="75" y="-701.12" font-family="Times,serif" font-size="14.00">Uživatel (Prohlížeč)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_RustApp</title>
+<polygon fill="lightgrey" stroke="black" points="150,-8 150,-572.2 732,-572.2 732,-8 150,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-555.6" font-family="Times,serif" font-size="14.00">Naše Rust Aplikace (dashboard-web)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_DI</title>
+<polygon fill="white" stroke="black" points="498,-168.5 498,-246.3 702,-246.3 702,-168.5 498,-168.5"/>
+<text xml:space="preserve" text-anchor="middle" x="600" y="-229.7" font-family="Times,serif" font-size="14.00">AppState (Dependency Injection)</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_Controllers</title>
+<polygon fill="white" stroke="black" points="209,-389.7 209,-473.1 577,-473.1 577,-389.7 209,-389.7"/>
+<text xml:space="preserve" text-anchor="middle" x="393" y="-456.5" font-family="Times,serif" font-size="14.00">Controllers / Handlers (routes/...)</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_Services</title>
+<polygon fill="white" stroke="black" points="405,-276.3 405,-359.7 660,-359.7 660,-276.3 405,-276.3"/>
+<text xml:space="preserve" text-anchor="middle" x="532.5" y="-343.1" font-family="Times,serif" font-size="14.00">Service Layer (services/...)</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_BG_Worker</title>
+<polygon fill="moccasin" stroke="black" points="475,-16 475,-116.2 665,-116.2 665,-16 475,-16"/>
+<text xml:space="preserve" text-anchor="middle" x="570" y="-99.6" font-family="Times,serif" font-size="14.00">Proces na pozadí (Rust)</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_External</title>
+<polygon fill="aliceblue" stroke="black" stroke-dasharray="5,2" points="740,-8 740,-124.2 1425,-124.2 1425,-8 740,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="1082.5" y="-107.6" font-family="Times,serif" font-size="14.00">Externí Služby (v k3s)</text>
+</g>
+<!-- User -->
+<g id="node1" class="node">
+<title>User</title>
+<polygon fill="white" stroke="black" points="44.43,-642.82 44.43,-684.42 133.57,-684.42 133.57,-642.82 44.43,-642.82"/>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-667.82" font-family="Arial" font-size="14.00">Uživatel</text>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-651.02" font-family="Arial" font-size="14.00">(Prohlížeč)</text>
+</g>
+<!-- BrowserJS -->
+<g id="node2" class="node">
+<title>BrowserJS</title>
+<polygon fill="white" stroke="black" points="16.44,-500.6 16.44,-542.2 133.56,-542.2 133.56,-500.6 16.44,-500.6"/>
+<text xml:space="preserve" text-anchor="middle" x="75" y="-525.6" font-family="Arial" font-size="14.00">JavaScript</text>
+<text xml:space="preserve" text-anchor="middle" x="75" y="-508.8" font-family="Arial" font-size="14.00">(v /mqtt stránce)</text>
+</g>
+<!-- User&#45;&gt;BrowserJS -->
+<g id="edge1" class="edge">
+<title>User-&gt;BrowserJS</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M86.99,-642.53C84.68,-619.31 80.83,-580.82 78.12,-553.67"/>
+<polygon fill="black" stroke="black" points="81.63,-553.56 77.15,-543.96 74.66,-554.26 81.63,-553.56"/>
+<text xml:space="preserve" text-anchor="middle" x="114.36" y="-595.2" font-family="Arial" font-size="10.00">načte stránku</text>
+</g>
+<!-- Router -->
+<g id="node3" class="node">
+<title>Router</title>
+<polygon fill="lightyellow" stroke="black" points="409.68,-521.4 369.84,-539.4 290.16,-539.4 250.32,-521.4 290.16,-503.4 369.84,-503.4 409.68,-521.4"/>
+<text xml:space="preserve" text-anchor="middle" x="330" y="-517.2" font-family="Arial" font-size="14.00">axum::Router</text>
+</g>
+<!-- User&#45;&gt;Router -->
+<g id="edge2" class="edge">
+<title>User-&gt;Router</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M133.99,-651.46C171.69,-641.63 222.14,-627.2 240,-616.2 267.98,-598.96 293.25,-570.99 309.84,-550.06"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="312.52,-552.32 315.84,-542.26 306.97,-548.05 312.52,-552.32"/>
+<text xml:space="preserve" text-anchor="middle" x="315.31" y="-607.2" font-family="Arial" font-size="10.00">GET /postgres</text>
+<text xml:space="preserve" text-anchor="middle" x="315.31" y="-595.2" font-family="Arial" font-size="10.00">GET /timescale</text>
+<text xml:space="preserve" text-anchor="middle" x="315.31" y="-583.2" font-family="Arial" font-size="10.00">GET /search</text>
+</g>
+<!-- User&#45;&gt;Router -->
+<g id="edge13" class="edge">
+<title>User-&gt;Router</title>
+<path fill="none" stroke="red" stroke-width="2" d="M115.84,-642.37C126.29,-634.35 138.31,-624.97 149,-616.2 167.86,-600.73 169.69,-593.03 190.44,-580.2 215.85,-564.48 246.3,-551.3 272.25,-541.52"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="273.19,-544.9 281.37,-538.17 270.78,-538.33 273.19,-544.9"/>
+<text xml:space="preserve" text-anchor="middle" x="213.22" y="-595.2" font-family="Arial" font-size="10.00">GET /mqtt</text>
+</g>
+<!-- BrowserJS&#45;&gt;Router -->
+<g id="edge16" class="edge">
+<title>BrowserJS-&gt;Router</title>
+</g>
+<!-- handler_web -->
+<g id="node5" class="node">
+<title>handler_web</title>
+<polygon fill="white" stroke="black" points="216.94,-398.2 216.94,-439.8 443.06,-439.8 443.06,-398.2 216.94,-398.2"/>
+<text xml:space="preserve" text-anchor="middle" x="330" y="-423.2" font-family="Arial" font-size="14.00">Web Handlery</text>
+<text xml:space="preserve" text-anchor="middle" x="330" y="-406.4" font-family="Arial" font-size="14.00">(page_postgres, page_search, ...)</text>
+</g>
+<!-- Router&#45;&gt;handler_web -->
+<g id="edge3" class="edge">
+<title>Router-&gt;handler_web</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M324.73,-502.91C323.24,-489.08 322.88,-469.38 323.63,-452.65"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="327.1,-453.28 324.27,-443.07 320.11,-452.81 327.1,-453.28"/>
+</g>
+<!-- Router&#45;&gt;handler_web -->
+<g id="edge14" class="edge">
+<title>Router-&gt;handler_web</title>
+<path fill="none" stroke="red" stroke-width="2" d="M335.27,-502.91C336.76,-489.08 337.12,-469.38 336.37,-452.65"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="339.89,-452.81 335.73,-443.07 332.9,-453.28 339.89,-452.81"/>
+</g>
+<!-- handler_api -->
+<g id="node6" class="node">
+<title>handler_api</title>
+<polygon fill="white" stroke="black" points="460.7,-398.2 460.7,-439.8 569.3,-439.8 569.3,-398.2 460.7,-398.2"/>
+<text xml:space="preserve" text-anchor="middle" x="515" y="-423.2" font-family="Arial" font-size="14.00">API Handler</text>
+<text xml:space="preserve" text-anchor="middle" x="515" y="-406.4" font-family="Arial" font-size="14.00">(api_get_stats)</text>
+</g>
+<!-- Router&#45;&gt;handler_api -->
+<g id="edge17" class="edge">
+<title>Router-&gt;handler_api</title>
+<path fill="none" stroke="red" stroke-width="2" d="M356.68,-502.99C369.84,-495.16 386.23,-486.49 402,-481.1 423.3,-473.83 431.54,-482.47 452,-473.1 464.91,-467.19 477.28,-457.87 487.59,-448.69"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="489.7,-451.51 494.59,-442.11 484.9,-446.41 489.7,-451.51"/>
+</g>
+<!-- AppState -->
+<g id="node4" class="node">
+<title>AppState</title>
+<polygon fill="lightblue" stroke="black" points="542.2,-177 542.2,-213 615.8,-213 615.8,-177 542.2,-177"/>
+<text xml:space="preserve" text-anchor="middle" x="579" y="-190.8" font-family="Arial" font-size="14.00">AppState</text>
+</g>
+<!-- AppState&#45;&gt;BrowserJS -->
+<g id="edge19" class="edge">
+<title>AppState:mqtt_stats-&gt;BrowserJS</title>
+<path fill="none" stroke="red" stroke-width="2" d="M541.77,-213.63C396.28,-257.3 341.48,-193.54 202,-254.3 111.25,-293.83 85.13,-425.47 77.79,-487.52"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="74.32,-487 76.75,-497.32 81.28,-487.74 74.32,-487"/>
+<text xml:space="preserve" text-anchor="middle" x="144.47" y="-370.7" font-family="Arial" font-size="10.00">vrací JSON data</text>
+</g>
+<!-- MqttWorker -->
+<g id="node9" class="node">
+<title>MqttWorker</title>
+<polygon fill="white" stroke="black" points="483.02,-24.5 483.02,-82.9 656.98,-82.9 656.98,-24.5 483.02,-24.5"/>
+<text xml:space="preserve" text-anchor="middle" x="570" y="-66.3" font-family="Arial" font-size="14.00">MQTT Sběrač</text>
+<text xml:space="preserve" text-anchor="middle" x="570" y="-49.5" font-family="Arial" font-size="14.00">(launch_mqtt_subscriber)</text>
+<text xml:space="preserve" text-anchor="middle" x="570" y="-32.7" font-family="Arial" font-size="14.00">(běží v tokio::spawn)</text>
+</g>
+<!-- AppState&#45;&gt;MqttWorker -->
+<g id="edge20" class="edge">
+<title>AppState-&gt;MqttWorker</title>
+<path fill="none" stroke="green" stroke-width="2" stroke-dasharray="1,5" d="M565.4,-176.51C561.45,-170.42 557.66,-163.32 555.64,-156.2 548.78,-132.06 553.83,-103.72 559.76,-83.13"/>
+<text xml:space="preserve" text-anchor="middle" x="592.32" y="-141.2" font-family="Arial" font-size="10.00">spustí při startu</text>
+</g>
+<!-- DB_PG -->
+<g id="node10" class="node">
+<title>DB_PG</title>
+<polygon fill="lightblue" stroke="black" points="1227.25,-16.5 1227.25,-90.9 1416.75,-90.9 1416.75,-16.5 1227.25,-16.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1322" y="-74.3" font-family="Arial" font-size="14.00">PostgreSQL Server</text>
+<polyline fill="none" stroke="black" points="1227.25,-66.1 1416.75,-66.1"/>
+<text xml:space="preserve" text-anchor="middle" x="1322" y="-49.5" font-family="Arial" font-size="14.00">TimescaleDB (senzor_data)</text>
+<polyline fill="none" stroke="black" points="1227.25,-41.3 1416.75,-41.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1322" y="-24.7" font-family="Arial" font-size="14.00">Relační data (moje_data)</text>
+</g>
+<!-- AppState&#45;&gt;DB_PG -->
+<g id="edge9" class="edge">
+<title>AppState:pg-&gt;DB_PG</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M616.24,-176.38C766.91,-136.12 812.24,-177.34 967,-156.2 1016.81,-149.4 1027.72,-138.97 1077.53,-132.2 1108.73,-127.96 1189.16,-134.26 1219,-124.2 1236.27,-118.38 1253.36,-108.83 1268.51,-98.65"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="1270.52,-101.51 1276.69,-92.9 1266.5,-95.78 1270.52,-101.51"/>
+<text xml:space="preserve" text-anchor="middle" x="1114.76" y="-141.2" font-family="Arial" font-size="10.00">SQL dotaz (sqlx)</text>
+</g>
+<!-- DB_VK -->
+<g id="node11" class="node">
+<title>DB_VK</title>
+<polygon fill="pink" stroke="black" points="887.9,-28.9 887.9,-78.5 1036.1,-78.5 1036.1,-28.9 887.9,-28.9"/>
+<text xml:space="preserve" text-anchor="middle" x="962" y="-61.9" font-family="Arial" font-size="14.00">Valkey Server</text>
+<polyline fill="none" stroke="black" points="887.9,-53.7 1036.1,-53.7"/>
+<text xml:space="preserve" text-anchor="middle" x="962" y="-37.1" font-family="Arial" font-size="14.00">dashboard:status: '...'</text>
+</g>
+<!-- AppState&#45;&gt;DB_VK -->
+<g id="edge10" class="edge">
+<title>AppState:vk-&gt;DB_VK</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M616.2,-176.35C649.91,-163.77 660.15,-165.98 695,-156.2 730.2,-146.33 737.74,-138.96 773.67,-132.2 796.74,-127.86 857.26,-133.05 879,-124.2 898.85,-116.12 917.48,-101.45 932.05,-87.67"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="934.2,-90.46 938.85,-80.94 929.28,-85.48 934.2,-90.46"/>
+<text xml:space="preserve" text-anchor="middle" x="805.33" y="-141.2" font-family="Arial" font-size="10.00">GET (redis-rs)</text>
+</g>
+<!-- DB_Manticore -->
+<g id="node13" class="node">
+<title>DB_Manticore</title>
+<polygon fill="sandybrown" stroke="black" points="1054.36,-20.5 1054.36,-86.9 1209.64,-86.9 1209.64,-20.5 1054.36,-20.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1132" y="-70.3" font-family="Arial" font-size="14.00">Manticore Search</text>
+<polyline fill="none" stroke="black" points="1054.36,-62.1 1209.64,-62.1"/>
+<text xml:space="preserve" text-anchor="middle" x="1132" y="-45.5" font-family="Arial" font-size="14.00">dashboard_index</text>
+<text xml:space="preserve" text-anchor="middle" x="1132" y="-28.7" font-family="Arial" font-size="14.00">(Prohledává Postgres)</text>
+</g>
+<!-- AppState&#45;&gt;DB_Manticore -->
+<g id="edge11" class="edge">
+<title>AppState:manticore-&gt;DB_Manticore</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M616.08,-176.42C710.78,-149.43 745.53,-193.08 837,-156.2 852.83,-149.82 851.01,-138.21 866.99,-132.2 904.05,-118.25 1007.93,-138.13 1045,-124.2 1061.89,-117.85 1078.03,-106.89 1091.72,-95.53"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="1093.71,-98.44 1098.95,-89.23 1089.11,-93.16 1093.71,-98.44"/>
+<text xml:space="preserve" text-anchor="middle" x="917" y="-141.2" font-family="Arial" font-size="10.00">HTTP/JSON (reqwest)</text>
+</g>
+<!-- handler_web&#45;&gt;AppState -->
+<g id="edge12" class="edge">
+<title>handler_web-&gt;AppState:tera</title>
+<path fill="none" stroke="gray" stroke-width="2" stroke-dasharray="1,5" d="M322.87,-397.82C313.74,-368.03 302.07,-311.95 328.75,-276.3 385.27,-200.75 444.52,-245.26 529.73,-217.95"/>
+<polygon fill="gray" stroke="gray" stroke-width="2" points="530.84,-221.28 539.08,-214.62 528.48,-214.68 530.84,-221.28"/>
+<text xml:space="preserve" text-anchor="middle" x="364.87" y="-302.6" font-family="Arial" font-size="10.00">renderuje HTML</text>
+</g>
+<!-- handler_web&#45;&gt;AppState -->
+<g id="edge15" class="edge">
+<title>handler_web-&gt;AppState:tera</title>
+<path fill="none" stroke="red" stroke-width="2" stroke-dasharray="1,5" d="M244.77,-397.82C225.9,-389.23 208.17,-377.02 196.84,-359.7 176.56,-328.68 173.09,-304.76 196.84,-276.3 293.88,-160.03 388.54,-256.96 529.34,-217.45"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="530.34,-220.81 538.87,-214.53 528.29,-214.12 530.34,-220.81"/>
+<text xml:space="preserve" text-anchor="middle" x="252.42" y="-302.6" font-family="Arial" font-size="10.00">renderuje prázdné HTML</text>
+</g>
+<!-- service_db -->
+<g id="node7" class="node">
+<title>service_db</title>
+<polygon fill="white" stroke="black" points="413.47,-284.8 413.47,-326.4 506.53,-326.4 506.53,-284.8 413.47,-284.8"/>
+<text xml:space="preserve" text-anchor="middle" x="460" y="-309.8" font-family="Arial" font-size="14.00">db_postgres</text>
+<text xml:space="preserve" text-anchor="middle" x="460" y="-293" font-family="Arial" font-size="14.00">db_valkey</text>
+</g>
+<!-- handler_web&#45;&gt;service_db -->
+<g id="edge4" class="edge">
+<title>handler_web-&gt;service_db</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M354.02,-397.85C367.32,-386.66 384.12,-372.46 399,-359.7 408.24,-351.78 418.21,-343.14 427.36,-335.17"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="429.38,-338.05 434.62,-328.84 424.78,-332.78 429.38,-338.05"/>
+<text xml:space="preserve" text-anchor="middle" x="396.93" y="-370.7" font-family="Arial" font-size="10.00">volá</text>
+</g>
+<!-- service_search -->
+<g id="node8" class="node">
+<title>service_search</title>
+<polygon fill="white" stroke="black" points="524.36,-287.6 524.36,-323.6 651.64,-323.6 651.64,-287.6 524.36,-287.6"/>
+<text xml:space="preserve" text-anchor="middle" x="588" y="-301.4" font-family="Arial" font-size="14.00">search_manticore</text>
+</g>
+<!-- handler_web&#45;&gt;service_search -->
+<g id="edge5" class="edge">
+<title>handler_web-&gt;service_search</title>
+<path fill="none" stroke="blue" stroke-width="2" d="M415.19,-397.73C447.68,-388.36 484.46,-375.7 516,-359.7 530.93,-352.12 546.06,-341.51 558.56,-331.76"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="560.43,-334.75 566.03,-325.76 556.05,-329.3 560.43,-334.75"/>
+<text xml:space="preserve" text-anchor="middle" x="506.1" y="-370.7" font-family="Arial" font-size="10.00">volá</text>
+</g>
+<!-- handler_api&#45;&gt;AppState -->
+<g id="edge18" class="edge">
+<title>handler_api-&gt;AppState:mqtt_stats</title>
+<path fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,2" d="M569.76,-409.88C601.82,-402.27 640.49,-387.66 664,-359.7 694.64,-323.27 706.91,-295.46 683,-254.3 679.58,-248.41 652.39,-233 626.67,-219.37"/>
+<polygon fill="red" stroke="red" stroke-width="2" points="628.59,-216.42 618.11,-214.87 625.34,-222.62 628.59,-216.42"/>
+<text xml:space="preserve" text-anchor="middle" x="713.66" y="-302.6" font-family="Arial" font-size="10.00">čte data</text>
+</g>
+<!-- service_db&#45;&gt;AppState -->
+<g id="edge6" class="edge">
+<title>service_db:e-&gt;AppState:pg</title>
+<path fill="none" stroke="blue" stroke-width="2" stroke-dasharray="5,2" d="M507.53,-305.6C520.97,-305.6 509.05,-288.35 515,-276.3 524.56,-256.93 539.26,-237.82 552.16,-223"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="554.62,-225.5 558.7,-215.72 549.41,-220.82 554.62,-225.5"/>
+<text xml:space="preserve" text-anchor="middle" x="554.15" y="-257.3" font-family="Arial" font-size="10.00">použije pool</text>
+</g>
+<!-- service_db&#45;&gt;AppState -->
+<g id="edge7" class="edge">
+<title>service_db:e-&gt;AppState:vk</title>
+<path fill="none" stroke="blue" stroke-width="2" stroke-dasharray="5,2" d="M507.53,-305.6C517,-305.6 512.24,-291.86 506.53,-284.3 491.43,-264.29 467.7,-286.66 453.07,-266.3 449.96,-261.97 450.19,-258.79 453.07,-254.3 474.04,-221.63 497.22,-229.76 529.81,-218.58"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="531,-221.87 538.94,-214.86 528.36,-215.39 531,-221.87"/>
+<text xml:space="preserve" text-anchor="middle" x="485.03" y="-257.3" font-family="Arial" font-size="10.00">použije klienta</text>
+</g>
+<!-- service_search&#45;&gt;AppState -->
+<g id="edge8" class="edge">
+<title>service_search:e-&gt;AppState:manticore</title>
+<path fill="none" stroke="blue" stroke-width="2" stroke-dasharray="5,2" d="M652.64,-305.6C660.87,-305.6 655.79,-294.21 651.64,-287.1 642.98,-272.27 630.87,-278.78 619.07,-266.3 607.79,-254.37 598.53,-238.67 591.76,-225.05"/>
+<polygon fill="blue" stroke="blue" stroke-width="2" points="594.95,-223.6 587.54,-216.02 588.61,-226.56 594.95,-223.6"/>
+<text xml:space="preserve" text-anchor="middle" x="651.03" y="-257.3" font-family="Arial" font-size="10.00">použije klienta</text>
+</g>
+<!-- MqttWorker&#45;&gt;AppState -->
+<g id="edge23" class="edge">
+<title>MqttWorker-&gt;AppState:mqtt_stats</title>
+<path fill="none" stroke="green" stroke-width="2" stroke-dasharray="5,2" d="M598.94,-83.28C610.68,-96.87 622.89,-114.09 629,-132.2 632.41,-142.31 633.69,-146.62 629,-156.2 626.92,-160.45 624.13,-164.36 620.92,-167.94"/>
+<polygon fill="green" stroke="green" stroke-width="2" points="618.78,-165.14 613.87,-174.53 623.57,-170.25 618.78,-165.14"/>
+<text xml:space="preserve" text-anchor="middle" x="661.52" y="-141.2" font-family="Arial" font-size="10.00">zapisuje data</text>
+</g>
+<!-- DB_MQTT -->
+<g id="node12" class="node">
+<title>DB_MQTT</title>
+<polygon fill="lightgreen" stroke="black" points="748.09,-28.9 748.09,-78.5 869.91,-78.5 869.91,-28.9 748.09,-28.9"/>
+<text xml:space="preserve" text-anchor="middle" x="809" y="-61.9" font-family="Arial" font-size="14.00">Mosquitto Server</text>
+<polyline fill="none" stroke="black" points="748.09,-53.7 869.91,-53.7"/>
+<text xml:space="preserve" text-anchor="middle" x="809" y="-37.1" font-family="Arial" font-size="14.00">$SYS Témata</text>
+</g>
+<!-- MqttWorker&#45;&gt;DB_MQTT -->
+<g id="edge21" class="edge">
+<title>MqttWorker-&gt;DB_MQTT</title>
+</g>
+<!-- DB_MQTT&#45;&gt;MqttWorker -->
+<g id="edge22" class="edge">
+<title>DB_MQTT:sys-&gt;MqttWorker</title>
+</g>
+<!-- Cron -->
+<g id="node14" class="node">
+<title>Cron</title>
+<polygon fill="moccasin" stroke="black" points="1279.14,-215.8 1148.86,-215.8 1148.86,-174.2 1279.14,-174.2 1279.14,-215.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1214" y="-199.2" font-family="Arial" font-size="14.00">Cron Job</text>
+<text xml:space="preserve" text-anchor="middle" x="1214" y="-182.4" font-family="Arial" font-size="14.00">(spouští 'indexer')</text>
+</g>
+<!-- Cron&#45;&gt;DB_PG -->
+<g id="edge24" class="edge">
+<title>Cron-&gt;DB_PG</title>
+<path fill="none" stroke="purple" stroke-width="2" stroke-dasharray="5,2" d="M1265.52,-173.77C1273.48,-168.93 1281.03,-163.11 1287,-156.2 1299.81,-141.37 1308,-121.61 1313.21,-103.46"/>
+<polygon fill="purple" stroke="purple" stroke-width="2" points="1316.57,-104.42 1315.67,-93.87 1309.79,-102.68 1316.57,-104.42"/>
+<text xml:space="preserve" text-anchor="middle" x="1344.4" y="-147.2" font-family="Arial" font-size="10.00">spustí 'indexer',</text>
+<text xml:space="preserve" text-anchor="middle" x="1344.4" y="-135.2" font-family="Arial" font-size="10.00">čte data z Postgres</text>
+</g>
+<!-- Cron&#45;&gt;DB_Manticore -->
+<g id="edge25" class="edge">
+<title>Cron-&gt;DB_Manticore</title>
+<path fill="none" stroke="purple" stroke-width="2" stroke-dasharray="5,2" d="M1185.71,-174.03C1179.65,-168.76 1173.71,-162.71 1169.15,-156.2 1157.35,-139.34 1148.84,-118.29 1142.97,-99.74"/>
+<polygon fill="purple" stroke="purple" stroke-width="2" points="1146.37,-98.88 1140.18,-90.28 1139.65,-100.87 1146.37,-98.88"/>
+<text xml:space="preserve" text-anchor="middle" x="1228.08" y="-141.2" font-family="Arial" font-size="10.00">zapisuje indexové soubory</text>
+</g>
+<!-- P_FrontController -->
+<g id="node15" class="node">
+<title>P_FrontController</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="400" cy="-663.62" rx="74.07" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="400" y="-659.42" font-family="Arial-Italic" font-size="14.00">Front Controller</text>
+</g>
+<!-- P_FrontController&#45;&gt;Router -->
+<g id="edge26" class="edge">
+<title>P_FrontController-&gt;Router</title>
+<g id="a_edge26"><a xlink:title="Front Controller (refactoring.guru: Other Patterns)&#10;&#10;Jeden objekt (Router) přijímá všechny požadavky&#10;a deleguje je správným 'controllerům' (handlerům).">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M391.42,-645.42C379.61,-621.77 358.21,-578.91 344.05,-550.54"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="347.27,-549.15 339.67,-541.77 341,-552.28 347.27,-549.15"/>
+</a>
+</g>
+</g>
+<!-- P_DI -->
+<g id="node16" class="node">
+<title>P_DI</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="588" cy="-663.62" rx="96.03" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="588" y="-659.42" font-family="Arial-Italic" font-size="14.00">Dependency Injection</text>
+</g>
+<!-- P_DI&#45;&gt;handler_web -->
+<g id="edge27" class="edge">
+<title>P_DI-&gt;handler_web</title>
+<g id="a_edge27"><a xlink:title="Dependency Injection (refactoring.guru: Other Patterns)&#10;&#10;Handlery si nevytvářejí své závislosti (např. DB pool).&#10;Framework (axum) jim je 'injektuje' (vloží) jako&#10;argument 'State&lt;AppState&gt;'.">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M545.53,-647.16C530.33,-639.81 514.2,-629.63 503,-616.2 465.8,-571.59 498.1,-537.61 462,-492.1 456.17,-484.76 452.14,-485.76 444,-481.1 423.2,-469.19 399.93,-456.58 379.86,-445.94"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="381.57,-442.88 371.09,-441.31 378.3,-449.07 381.57,-442.88"/>
+</a>
+</g>
+</g>
+<!-- P_DI&#45;&gt;handler_api -->
+<g id="edge28" class="edge">
+<title>P_DI-&gt;handler_api</title>
+<g id="a_edge28"><a xlink:title="Dependency Injection (refactoring.guru: Other Patterns)&#10;&#10;Handlery si nevytvářejí své závislosti (např. DB pool).&#10;Framework (axum) jim je 'injektuje' (vloží) jako&#10;argument 'State&lt;AppState&gt;'.">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M552.62,-646.63C540.4,-639.22 528.03,-629.13 521,-616.2 492.82,-564.35 500.02,-492.87 507.63,-452.04"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="511.03,-452.89 509.57,-442.39 504.17,-451.51 511.03,-452.89"/>
+</a>
+</g>
+</g>
+<!-- P_Facade -->
+<g id="node17" class="node">
+<title>P_Facade</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="1016" cy="-663.62" rx="38.38" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1016" y="-659.42" font-family="Arial-Italic" font-size="14.00">Facade</text>
+</g>
+<!-- cluster_Services -->
+<g id="node21" class="node">
+<title>cluster_Services</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="1164" cy="-663.62" rx="74.32" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1164" y="-659.42" font-family="Arial-Italic" font-size="14.00">cluster_Services</text>
+</g>
+<!-- P_Facade&#45;&gt;cluster_Services -->
+<g id="edge29" class="edge">
+<title>P_Facade-&gt;cluster_Services</title>
+<g id="a_edge29"><a xlink:title="Facade (refactoring.guru: Structural Patterns)&#10;&#10;'Service Layer' poskytuje jednoduché API (např. 'get_valkey_kv()')&#10;a skrývá komplexní logiku (SQL, HTTP volání) &#10;před 'Controllery'.">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M1054.73,-663.62C1062.21,-663.62 1069.68,-663.62 1077.15,-663.62"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="1077.04,-667.12 1087.04,-663.62 1077.04,-660.12 1077.04,-667.12"/>
+</a>
+</g>
+</g>
+<!-- P_TemplateMethod -->
+<g id="node18" class="node">
+<title>P_TemplateMethod</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="782" cy="-663.62" rx="79.96" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="782" y="-659.42" font-family="Arial-Italic" font-size="14.00">Template Method</text>
+</g>
+<!-- P_TemplateMethod&#45;&gt;AppState -->
+<g id="edge30" class="edge">
+<title>P_TemplateMethod-&gt;AppState:tera</title>
+<g id="a_edge30"><a xlink:title="Template Method (refactoring.guru: Behavioral Patterns)&#10;&#10;'layout.html' definuje 'kostru' (algoritmus) stránky.&#10;Pod-šablony (např. 'search.html') rozšiřují kostru&#10;a mění jen specifické kroky ('{% block content %}').">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M740.76,-647.8C725.86,-642.89 708.82,-637.78 693,-634.2 664.12,-627.67 580.47,-638.5 561,-616.2 543.21,-595.82 514.53,-530.27 562,-481.1 575.67,-466.94 725.17,-487.11 739,-473.1 800.45,-410.84 783.89,-349.51 736,-276.3 734.3,-273.7 672.13,-241.96 626.55,-218.92"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="628.19,-215.83 617.68,-214.45 625.03,-222.08 628.19,-215.83"/>
+</a>
+</g>
+</g>
+<!-- P_Builder -->
+<g id="node19" class="node">
+<title>P_Builder</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="920" cy="-663.62" rx="40" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="920" y="-659.42" font-family="Arial-Italic" font-size="14.00">Builder</text>
+</g>
+<!-- P_Builder&#45;&gt;AppState -->
+<g id="edge31" class="edge">
+<title>P_Builder-&gt;AppState</title>
+<g id="a_edge31"><a xlink:title="Builder (refactoring.guru: Creational Patterns)&#10;&#10;Použili jsme 'AppStateBuilder' k sestavení&#10;komplexního objektu 'AppState' krok za krokem&#10;(přidání PgPool, ValkeyClient, atd.).">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M917.91,-645.14C909.94,-585.76 876.33,-389.14 770,-276.3 732.09,-236.06 670.85,-215.2 627.97,-204.95"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="628.86,-201.56 618.33,-202.77 627.32,-208.39 628.86,-201.56"/>
+</a>
+</g>
+</g>
+<!-- P_Observer -->
+<g id="node20" class="node">
+<title>P_Observer</title>
+<ellipse fill="khaki" stroke="black" stroke-dasharray="1,5" cx="256" cy="-663.62" rx="51.47" ry="29.42"/>
+<text xml:space="preserve" text-anchor="middle" x="256" y="-667.82" font-family="Arial-Italic" font-size="14.00">Observer</text>
+<text xml:space="preserve" text-anchor="middle" x="256" y="-651.02" font-family="Arial-Italic" font-size="14.00">(Pub/Sub)</text>
+</g>
+<!-- P_Observer&#45;&gt;MqttWorker -->
+<g id="edge32" class="edge">
+<title>P_Observer-&gt;MqttWorker</title>
+<g id="a_edge32"><a xlink:title="Observer / Pub/Sub (refactoring.guru: Behavioral Patterns)&#10;&#10;Náš 'MQTT Sběrač' je 'Subscriber' (Odběratel),&#10;který trvale naslouchá zprávám ('$SYS' témata)&#10;a reaguje na ně (aktualizuje sdílený stav).">
+<path fill="none" stroke="blue" stroke-width="1.5" stroke-dasharray="5,2" d="M295.2,-644.14C316.85,-633.84 341.44,-621.96 352,-616.2 384.92,-598.24 392.91,-593.17 424,-572.2 473.55,-538.79 480.33,-522.12 532,-492.1 542.5,-486 545.67,-485.47 557,-481.1 567.49,-477.05 570.87,-477.99 581,-473.1 639.05,-445.07 1036.29,-212.88 1067,-156.2 1072.08,-146.82 1074.45,-139.83 1067,-132.2 1054.15,-119.04 753.99,-128.04 736,-124.2 701.3,-116.79 664.73,-102.28 634.76,-88.43"/>
+<polygon fill="blue" stroke="blue" stroke-width="1.5" points="636.63,-85.44 626.09,-84.34 633.64,-91.77 636.63,-85.44"/>
+</a>
+</g>
+</g>
+</g>
+</svg>

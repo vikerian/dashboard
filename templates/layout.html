@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Můj Dashboard{% endblock title %}</title>
+ <style>
+        body { font-family: sans-serif; margin: 2em; background: #f4f4f4; }
+        nav { background: #333; padding: 1em; }
+        nav a { color: white; text-decoration: none; margin-right: 1em; }
+        .content { background: white; padding: 2em; border-radius: 5px; }
+
+        /* --- PŘIDEJTE TYTO ŘÁDKY --- */
+        table {
+            border-collapse: collapse; /* Spojí buňky do jedné čáry */
+            width: 100%;
+            margin-top: 1.5em; /* Odsazení od nadpisu */
+        }
+        
+        th, td {
+            border: 1px solid #ccc; /* Vnitřní i vnější ohraničení */
+            padding: 0.5em; /* Vnitřní odsazení buněk */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0; /* Lehké pozadí pro hlavičku */
+        }
+        /* --- KONEC PŘIDÁNÍ --- */
+    </style>
+</head>
+<body {% block body_attributes %}{% endblock body_attributes %}>
+    <nav>
+        <a href="/">Domů</a>
+        <a href="/search">Hledání</a>
+        <a href="/mqtt">MQTT Přehled</a>
+        <a href="/postgres">Postgres Data</a>
+        <a href="/timescale">Senzory (Timescale)</a> 
+        <a href="/valkey">Valkey (K:V)</a> 
+        <a href="/static/architektura.svg" target="_blank">Architektura_aplikace</a>
+        
+    </nav>
+    <main class="content">
+        {% block content %}
+        <p>Obsah se nenačetl...</p>
+        {% endblock content %}
+    </main>
+</body>
+</html>

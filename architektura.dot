@@ -1,0 +1,194 @@
+/*
+ * Finální schéma architektury RPi Dashboardu
+ * (Vertikální verze s vyznačenými návrhovými vzory)
+ */
+digraph FinalArchitecture {
+    bgcolor="transparent";
+    rankdir=TD; // Vertikální layout (Top-Down)
+    
+    node [shape=record, style="filled", fillcolor="white", fontname="Arial"];
+    edge [fontname="Arial", fontsize=10];
+
+    // --- Uživatel / Prohlížeč ---
+    subgraph cluster_User {
+        label="Uživatel (Prohlížeč)";
+        bgcolor="aliceblue";
+        User [label="Uživatel\n(Prohlížeč)"];
+        BrowserJS [label="JavaScript\n(v /mqtt stránce)"];
+        User -> BrowserJS [style=dotted, label="načte stránku"];
+    }
+
+    // --- Naše Rust Aplikace ---
+    subgraph cluster_RustApp {
+        label = "Naše Rust Aplikace (dashboard-web)";
+        style = "filled";
+        bgcolor = "lightgrey";
+        
+        Router [label="axum::Router", shape=hexagon, style="filled", fillcolor="lightyellow"];
+        
+        subgraph cluster_DI {
+            label = "AppState (Dependency Injection)";
+            style = "filled";
+            bgcolor = "white";
+            AppState [
+                label="{ AppState (Sdílený Stav) | \
+                          <tera> Tera (Šablony) | \
+                          <pg> PgPool (Postgres+Timescale) | \
+                          <vk> ValkeyClient | \
+                          <manticore> ManticoreClient | \
+                          <manticore_url> Manticore URL | \
+                          <mqtt_cfg> MqttConfig | \
+                          <mqtt_stats> Arc<RwLock<MqttStats>> \
+                       }", 
+                shape=record, 
+                fillcolor="lightblue"
+            ];
+        }
+
+        subgraph cluster_Controllers {
+            label = "Controllers / Handlers (routes/...)";
+            style = "filled";
+            bgcolor = "white";
+            handler_web [label="Web Handlery\n(page_postgres, page_search, ...)"];
+            handler_api [label="API Handler\n(api_get_stats)"];
+        }
+
+        subgraph cluster_Services {
+            label = "Service Layer (services/...)";
+            style = "filled";
+            bgcolor = "white";
+            service_db [label="db_postgres\ndb_valkey"];
+            service_search [label="search_manticore"];
+        }
+        
+        subgraph cluster_BG_Worker {
+            label = "Proces na pozadí (Rust)";
+            style = "filled";
+            bgcolor="moccasin";
+            MqttWorker [label="MQTT Sběrač\n(launch_mqtt_subscriber)\n(běží v tokio::spawn)"];
+        }
+    }
+
+    // --- Externí Služby a Databáze ---
+    subgraph cluster_External {
+        label = "Externí Služby (v k3s)";
+        style = "dashed";
+        bgcolor = "aliceblue";
+
+        DB_PG [
+            label="{ <hdr> PostgreSQL Server | <ts> TimescaleDB (senzor_data) | <tbl> Relační data (moje_data) }", 
+            shape=record, 
+            fillcolor="lightblue"
+        ];
+        
+        DB_VK [
+            label="{ Valkey Server | <kv> dashboard:status: '...' }", 
+            shape=record, 
+            fillcolor="pink"
+        ];
+        
+        DB_MQTT [
+            label="{ Mosquitto Server | <sys> $SYS Témata }", 
+            shape=record, 
+            fillcolor="lightgreen"
+        ];
+        
+        DB_Manticore [
+            label="{ Manticore Search | <idx> dashboard_index\n(Prohledává Postgres) }",
+            shape=record, 
+            fillcolor="sandybrown"
+        ];
+    }
+    
+    // --- Ostatní Procesy (Cron) ---
+    Cron [label="Cron Job\n(spouští 'indexer')", shape=timer, style="filled", fillcolor="moccasin"];
+    
+    // ================================================================
+    // --- 5. NÁVRHOVÉ VZORY (Info Bubliny) ---
+    // ================================================================
+    node [shape=ellipse, style="filled,dotted", fillcolor="khaki", fontname="Arial-Italic"];
+    
+    P_FrontController [label="Front Controller"];
+    P_DI [label="Dependency Injection"];
+    P_Facade [label="Facade"];
+    P_TemplateMethod [label="Template Method"];
+    P_Builder [label="Builder"];
+    P_Observer [label="Observer\n(Pub/Sub)"];
+    
+    // ================================================================
+    // --- TOKY DAT (Hrany) ---
+    // ================================================================
+    
+    // --- Tok 1: Statické stránky (Modrá) ---
+    edge [color="blue", penwidth=2];
+    User -> Router [label="GET /postgres\nGET /timescale\nGET /search"];
+    Router -> handler_web;
+    handler_web -> service_db [label="volá"];
+    handler_web -> service_search [label="volá"];
+    
+    service_db:e -> AppState:pg [style=dashed, label="použije pool"];
+    service_db:e -> AppState:vk [style=dashed, label="použije klienta"];
+    service_search:e -> AppState:manticore [style=dashed, label="použije klienta"];
+    
+    AppState:pg -> DB_PG [label="SQL dotaz (sqlx)"];
+    AppState:vk -> DB_VK [label="GET (redis-rs)"];
+    AppState:manticore -> DB_Manticore [label="HTTP/JSON (reqwest)"];
+    
+    handler_web -> AppState:tera [style=dotted, color=gray, label="renderuje HTML"];
+
+    // --- Tok 2: Dynamické MQTT (Červená) ---
+    edge [color="red", penwidth=2];
+    User -> Router [label="GET /mqtt"];
+    Router -> handler_web [color="red", style=solid];
+    handler_web -> AppState:tera [color="red", style=dotted, label="renderuje prázdné HTML"];
+    BrowserJS -> Router [label="GET /api/v1/mqtt/stats\n(každých 60s)"];
+    Router -> handler_api [color="red", style=solid];
+    handler_api -> AppState:mqtt_stats [label="čte data", style=dashed];
+    AppState:mqtt_stats -> BrowserJS [label="vrací JSON data"];
+
+    // --- Tok 3: MQTT Sběrač (Zelená) ---
+    edge [color="green", penwidth=2, style=dashed];
+    AppState -> MqttWorker [label="spustí při startu", style=dotted, arrowhead=none];
+    MqttWorker -> DB_MQTT [label="Trvalé připojení\n(rumqttc)"];
+    DB_MQTT:sys -> MqttWorker [label="$SYS zprávy"];
+    MqttWorker -> AppState:mqtt_stats [label="zapisuje data"];
+    
+    // --- Tok 4: Manticore Indexace (Fialová) ---
+    edge [color="purple", penwidth=2, style=dashed];
+    Cron -> DB_PG [label="spustí 'indexer',\nčte data z Postgres"];
+    Cron -> DB_Manticore [label="zapisuje indexové soubory"];
+
+    // ================================================================
+    // --- 6. Šipky pro Návrhové Vzory ---
+    // ================================================================
+    // Tyto šipky jsou modré a přerušované, aby se odlišily.
+    // 'constraint=false' zabraňuje tomu, aby rozbily layout.
+    edge [style=dashed, arrowhead=normal, color=blue, constraint=false, penwidth=1.5];
+    
+    P_FrontController -> Router [
+        tooltip="Front Controller (refactoring.guru: Other Patterns)\n\nJeden objekt (Router) přijímá všechny požadavky\na deleguje je správným 'controllerům' (handlerům)."
+    ];
+    
+    P_DI -> handler_web [
+        tooltip="Dependency Injection (refactoring.guru: Other Patterns)\n\nHandlery si nevytvářejí své závislosti (např. DB pool).\nFramework (axum) jim je 'injektuje' (vloží) jako\nargument 'State<AppState>'."
+    ];
+    P_DI -> handler_api [
+        tooltip="Dependency Injection (refactoring.guru: Other Patterns)\n\nHandlery si nevytvářejí své závislosti (např. DB pool).\nFramework (axum) jim je 'injektuje' (vloží) jako\nargument 'State<AppState>'."
+    ];
+
+    P_Facade -> cluster_Services [
+        tooltip="Facade (refactoring.guru: Structural Patterns)\n\n'Service Layer' poskytuje jednoduché API (např. 'get_valkey_kv()')\na skrývá komplexní logiku (SQL, HTTP volání) \npřed 'Controllery'."
+    ];
+
+    P_TemplateMethod -> AppState:tera [
+        tooltip="Template Method (refactoring.guru: Behavioral Patterns)\n\n'layout.html' definuje 'kostru' (algoritmus) stránky.\nPod-šablony (např. 'search.html') rozšiřují kostru\na mění jen specifické kroky ('{% block content %}')."
+    ];
+    
+    P_Builder -> AppState [
+        tooltip="Builder (refactoring.guru: Creational Patterns)\n\nPoužili jsme 'AppStateBuilder' k sestavení\nkomplexního objektu 'AppState' krok za krokem\n(přidání PgPool, ValkeyClient, atd.)."
+    ];
+    
+    P_Observer -> MqttWorker [
+        tooltip="Observer / Pub/Sub (refactoring.guru: Behavioral Patterns)\n\nNáš 'MQTT Sběrač' je 'Subscriber' (Odběratel),\nkterý trvale naslouchá zprávám ('$SYS' témata)\na reaguje na ně (aktualizuje sdílený stav)."
+    ];
+}

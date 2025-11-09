@@ -1,0 +1,20 @@
+2025-10-31T18:35:28.132659Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-10-31T18:35:28.132960Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-10-31T18:35:39.852132Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-10-31T18:37:44.532917Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-10-31T18:37:44.533146Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-10-31T18:37:52.270835Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-10-31T19:52:40.637663Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-10-31T19:52:40.637725Z  INFO dashboard_project: Sestavuji AppState a načítám šablony...
+2025-10-31T19:52:40.640288Z  INFO dashboard_project: AppState sestaven.
+2025-10-31T19:52:40.640701Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-10-31T19:53:51.463902Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-10-31T19:54:08.777348Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-10-31T22:47:45.237302Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-10-31T22:49:49.926136Z  INFO dashboard_project: Logování úspěšně inicializováno.
+2025-10-31T22:49:49.926202Z  INFO dashboard_project: Sestavuji AppState a připojuji k DB...
+2025-10-31T22:49:50.050746Z  INFO dashboard_project::state: Úspěšně připojeno k Postgres databázi.
+2025-10-31T22:49:50.051512Z  INFO dashboard_project: Server bude naslouchat na adrese http://0.0.0.0:8080
+2025-10-31T22:49:58.278736Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres
+2025-10-31T22:50:40.883604Z  INFO dashboard_project::routes::web: Obsloužen požadavek na / (page_index)
+2025-10-31T22:50:47.107574Z  INFO dashboard_project::routes::web: Obsloužen požadavek na /postgres

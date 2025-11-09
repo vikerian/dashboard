@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Valkey K:V{% endblock title %}
+
+{% block content %}
+    <h1>Valkey (K:V) Přehled</h1>
+    <p>Zobrazení testovacího klíče z databáze:</p>
+    
+    <div style="background: #eee; padding: 1em; border-radius: 5px;">
+        <strong>Klíč:</strong>
+        <pre>{{ key }}</pre>
+        
+        <strong style="margin-top: 1em; display: block;">Hodnota:</strong>
+        <pre>{{ value }}</pre>
+    </div>
+    
+{% endblock content %}
